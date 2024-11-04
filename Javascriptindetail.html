@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Conversion, search, and replace string</h2>
+    <p id="search_result"></p>
+    <p id="replace_result"></p>
+    <p id="string_result"></p>
+    <p id="error_message"></p>
+    <p id="result"></p>
+    <script>
+        var string="Asalaam-u-Alaikum, how are doing today?";
+        var search_result=string.search("doing");
+        var txt=string.replace("how are", "how are you");
+        var x=70;
+        var y=90;
+
+        document.getElementById("search_result").innerHTML=search_result;
+        document.getElementById("replace_result").innerHTML=txt;
+        document.getElementById("string_result").innerHTML=String(x) + String(y);
+
+        try {
+            addalert("Welcome friend!");
+        }
+        catch(err) {
+            document.getElementById("error_message").innerHTML = err.message;
+        }
+
+        function add(a,b){
+            return a+b;
+        }
+        add = (a,b) => a+b;
+        document.getElementById("result").innerHTML = add(4,9);
+    </script>
+</body>
+</html>

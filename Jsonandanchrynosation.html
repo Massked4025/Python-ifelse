@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Json and Asynchronous</h2>
+    <p id="result"></p>
+    <p id="demo"></p>
+    <h1 id="result2"></h1>
+    <script>
+        function myDisplayer(value) {
+            document.getElementById("result").innerHTML = value;
+        }
+        function myCalculator(num1, num2) {
+            let sum = num1 + num2;
+            myDisplayer(sum);
+        }
+        myCalculator(4, 4);
+
+        function sum(a,b){
+            var sum = a + b;
+            document.getElementById("demo").innerHTML = sum;
+        }
+        let myPromis = new Promise(function(myResolve, myReject) {
+            let x = 0;
+
+            if (x == 0) {
+                myResolve ("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+        myPromise.then(
+            function(value) {sum(7,5);},
+            function(error) {sum(error);}
+        );
+
+        async function add(a,b) {
+            let response = await a + b;
+            display(response);
+        }
+        function display(some) {
+            document.getElementById("result2").innerHTML = some;
+        }
+        add(6,3);
+    </script>
+</body>
+</html>

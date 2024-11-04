@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java script classes</h1>
+    <script>
+        class student{
+            constructor(name,place){
+                this.name=name;
+                this.place=place;
+            }
+            display(){
+                return this.name+" "+this.place+ "<br>"
+
+            }
+        }
+        student1=new student("Ahmed, Peshawar")
+        document.write(student1.display())
+        class age extends student{
+            constructor(name,place,age){
+                super(name,place)
+                this.age = age
+            }
+            displayall(){
+                return this.display() + "the age is" + this.age
+            }
+            static hello(){
+                return "hey!"
+            }
+        }
+        student2 = new age("Ahmed", "Peshawar", "17")
+        document.write(student2.displayall())
+        document.write(age.hello())
+
+    </script>
+</body>
+</html>
