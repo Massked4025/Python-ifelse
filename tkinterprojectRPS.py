@@ -31,7 +31,6 @@ def isrock():
 	l4.config(text=match_result)
 	l1.config(text="Rock		 ")
 	l3.config(text=c_v)
-	button_disable()
 
 def ispaper():
 	c_v = computer_value[str(random.randint(0, 2))]
@@ -44,7 +43,6 @@ def ispaper():
 	l4.config(text=match_result)
 	l1.config(text="Paper		 ")
 	l3.config(text=c_v)
-	button_disable()
 
 def isscissor():
 	c_v = computer_value[str(random.randint(0, 2))]
@@ -57,7 +55,6 @@ def isscissor():
 	l4.config(text=match_result)
 	l1.config(text="Scissor		 ")
 	l3.config(text=c_v)
-	button_disable()
 
 
 Label(root,
